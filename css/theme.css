@@ -1,0 +1,560 @@
+/* ============================================
+   DARK / LIGHT MODE THEME SYSTEM
+   ============================================ */
+
+/* ========== VISIBILITY FIXES (Both Modes) ========== */
+
+/* Fix: Improve secondary text contrast on light backgrounds */
+:root {
+  --text-secondary-enhanced: #4A3222;
+  --text-light-enhanced: #705840;
+}
+
+/* Fix: Better placeholder visibility */
+.wishes-form input::placeholder,
+.wishes-form textarea::placeholder {
+  color: #9E8E7E;
+  opacity: 1;
+}
+
+/* Fix: Dress code text needs better contrast */
+.dress-code {
+  color: #7A5C1E !important;
+  font-weight: 500 !important;
+}
+
+/* Fix: Event detail text improved contrast */
+.event-detail {
+  color: var(--text-secondary-enhanced) !important;
+}
+
+/* Fix: Timeline text improved readability */
+.timeline-text {
+  color: var(--text-secondary-enhanced) !important;
+}
+
+/* Fix: Bank detail labels improved visibility */
+.bank-detail-label {
+  color: var(--text-light-enhanced) !important;
+}
+
+/* Fix: Location address improved contrast */
+.location-address {
+  color: var(--text-secondary-enhanced) !important;
+}
+
+/* Fix: Wish message text improved contrast */
+.wish-message {
+  color: var(--text-secondary-enhanced) !important;
+}
+
+/* Fix: Section subtitle improved contrast */
+.section-subtitle {
+  color: #7A5C1E !important;
+}
+
+/* Fix: Footer credit text improved visibility */
+.footer-credit {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* Fix: Ritual description improved visibility */
+.ritual-desc {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+/* Fix: Poruwa description improved visibility */
+.poruwa-description {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Fix: Footer message improved visibility */
+.footer-message {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Fix: Footer contact links improved visibility */
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ========== THEME TOGGLE BUTTONS ========== */
+
+/* Nav theme toggle */
+.theme-toggle-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.1rem;
+  padding: 0;
+}
+
+.theme-toggle-nav:hover {
+  background: rgba(201, 168, 76, 0.25);
+  border-color: var(--gold);
+  transform: scale(1.1);
+}
+
+/* Floating theme toggle */
+.theme-toggle-float {
+  position: fixed;
+  bottom: 230px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: rgba(26, 15, 10, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 100;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 168, 76, 0.2);
+}
+
+.theme-toggle-float:hover {
+  background: var(--gold);
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(201, 168, 76, 0.4);
+}
+
+/* Icon visibility logic */
+.theme-icon-moon {
+  display: inline;
+}
+
+.theme-icon-sun {
+  display: none;
+}
+
+/* ========== DARK MODE ========== */
+
+body.dark-mode {
+  --ivory: #0F0E0C;
+  --ivory-warm: #151310;
+  --beige: #1E1B17;
+  --beige-dark: #2A2520;
+  --white: #ffffff;
+  --dark: #F5F0E8;
+  --text-primary: #E8DFD0;
+  --text-secondary: #C4B8A5;
+  --text-secondary-enhanced: #C4B8A5;
+  --text-light: #9C8E7C;
+  --text-light-enhanced: #9C8E7C;
+
+  background-color: #0F0E0C;
+  color: #E8DFD0;
+}
+
+/* --- Dark mode icon swap --- */
+body.dark-mode .theme-icon-moon {
+  display: none;
+}
+
+body.dark-mode .theme-icon-sun {
+  display: inline;
+}
+
+/* --- Dark Mode: Float toggle --- */
+body.dark-mode .theme-toggle-float {
+  background: rgba(245, 240, 232, 0.12);
+  border-color: var(--gold);
+}
+
+body.dark-mode .theme-toggle-float:hover {
+  background: var(--gold);
+}
+
+/* --- Dark Mode: Body & sections --- */
+body.dark-mode {
+  background-color: #0F0E0C;
+}
+
+body.dark-mode section {
+  background: #0F0E0C;
+}
+
+body.dark-mode section:nth-child(even) {
+  background: #151310;
+}
+
+/* --- Dark Mode: Love Story --- */
+body.dark-mode .love-story {
+  background: #0F0E0C;
+}
+
+/* --- Dark Mode: Wedding Details --- */
+body.dark-mode .wedding-details {
+  background: #151310;
+}
+
+/* --- Dark Mode: Families --- */
+body.dark-mode .families-section {
+  background: #0F0E0C;
+}
+
+/* --- Dark Mode: Locations --- */
+body.dark-mode .locations-section {
+  background: #151310;
+}
+
+/* --- Dark Mode: Gallery --- */
+body.dark-mode .gallery-section {
+  background: #0F0E0C;
+}
+
+/* --- Dark Mode: Wishes --- */
+body.dark-mode .wishes-section {
+  background: #0F0E0C;
+}
+
+/* --- Dark Mode: Gifts --- */
+body.dark-mode .gift-section {
+  background: #151310;
+}
+
+/* --- Dark Mode: Section Titles & Subtitles --- */
+body.dark-mode .section-title {
+  color: #E8DFD0;
+}
+
+body.dark-mode .section-subtitle {
+  color: var(--gold) !important;
+}
+
+body.dark-mode .section-divider .ornament {
+  color: var(--gold-light);
+}
+
+/* --- Dark Mode: Navbar --- */
+body.dark-mode .navbar.scrolled {
+  background: rgba(15, 14, 12, 0.95);
+}
+
+/* --- Dark Mode: Cards --- */
+body.dark-mode .timeline-content,
+body.dark-mode .event-card,
+body.dark-mode .family-card,
+body.dark-mode .location-card,
+body.dark-mode .gift-card,
+body.dark-mode .wish-card {
+  background: #1A1815;
+  border-color: #2A2520;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .timeline-content:hover,
+body.dark-mode .event-card:hover,
+body.dark-mode .family-card:hover,
+body.dark-mode .location-card:hover,
+body.dark-mode .gift-card:hover,
+body.dark-mode .wish-card:hover {
+  box-shadow: 0 6px 30px rgba(201, 168, 76, 0.15);
+}
+
+/* --- Dark Mode: Event card --- */
+body.dark-mode .event-name {
+  color: #E8DFD0;
+}
+
+body.dark-mode .event-detail {
+  color: #B8AA96 !important;
+}
+
+body.dark-mode .dress-code {
+  color: var(--gold) !important;
+  border-top-color: #2A2520;
+}
+
+/* --- Dark Mode: Timeline --- */
+body.dark-mode .timeline::before {
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+}
+
+body.dark-mode .timeline-dot {
+  border-color: #0F0E0C;
+}
+
+body.dark-mode .timeline-year {
+  color: var(--gold);
+}
+
+body.dark-mode .timeline-title {
+  color: #E8DFD0;
+}
+
+body.dark-mode .timeline-text {
+  color: #B8AA96 !important;
+}
+
+/* --- Dark Mode: Families --- */
+body.dark-mode .family-label {
+  color: var(--gold);
+}
+
+body.dark-mode .family-name {
+  color: #E8DFD0;
+}
+
+body.dark-mode .family-role {
+  color: var(--gold);
+}
+
+body.dark-mode .family-avatar {
+  background: #2A2520;
+  border-color: var(--gold);
+}
+
+body.dark-mode .family-blessing {
+  background: #1A1815;
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+body.dark-mode .blessing-text {
+  color: #D4C8B4;
+}
+
+/* --- Dark Mode: Locations --- */
+body.dark-mode .location-name {
+  color: #E8DFD0;
+}
+
+body.dark-mode .location-address {
+  color: #B8AA96 !important;
+}
+
+body.dark-mode .location-tag {
+  background: rgba(201, 168, 76, 0.2);
+  color: var(--gold);
+}
+
+body.dark-mode .location-map {
+  background: #1A1815;
+}
+
+body.dark-mode .btn-directions {
+  background: var(--gold);
+  color: #0F0E0C;
+}
+
+body.dark-mode .btn-directions:hover {
+  background: var(--gold-light);
+  color: #0F0E0C;
+}
+
+/* --- Dark Mode: Wishes form --- */
+body.dark-mode .wishes-form input,
+body.dark-mode .wishes-form textarea {
+  background: #1A1815;
+  border-color: #2A2520;
+  color: #E8DFD0;
+}
+
+body.dark-mode .wishes-form input::placeholder,
+body.dark-mode .wishes-form textarea::placeholder {
+  color: #6E6050;
+}
+
+body.dark-mode .wishes-form input:focus,
+body.dark-mode .wishes-form textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+}
+
+body.dark-mode .btn-wish {
+  background: var(--gold);
+  color: #0F0E0C;
+}
+
+/* --- Dark Mode: Wish Cards --- */
+body.dark-mode .wish-name {
+  color: var(--gold);
+}
+
+body.dark-mode .wish-message {
+  color: #B8AA96 !important;
+}
+
+body.dark-mode .wish-date {
+  color: #7A6E5C;
+}
+
+body.dark-mode .wish-card {
+  border-left-color: var(--gold);
+}
+
+/* --- Dark Mode: Gift section --- */
+body.dark-mode .gift-message {
+  color: #D4C8B4;
+}
+
+body.dark-mode .bank-details {
+  background: #121110;
+  border: 1px solid #2A2520;
+}
+
+body.dark-mode .bank-detail-row {
+  border-bottom-color: #2A2520;
+}
+
+body.dark-mode .bank-detail-label {
+  color: #9C8E7C !important;
+}
+
+body.dark-mode .bank-detail-value {
+  color: #E8DFD0;
+}
+
+/* --- Dark Mode: Poruwa (already dark, minor tweaks) --- */
+body.dark-mode .poruwa-section {
+  background: linear-gradient(135deg, #0A0908 0%, #3A0B0B 100%);
+}
+
+body.dark-mode .poruwa-frame {
+  background: rgba(10, 9, 8, 0.7);
+}
+
+/* --- Dark Mode: RSVP (already dark, minor tweaks) --- */
+body.dark-mode .rsvp-section {
+  background: linear-gradient(135deg, #3A0B0B 0%, #0A0908 100%);
+}
+
+/* --- Dark Mode: Footer (already dark, minor tweaks) --- */
+body.dark-mode .footer {
+  background: linear-gradient(135deg, #0A0908 0%, #2A0808 100%);
+}
+
+/* --- Dark Mode: Loading Screen --- */
+body.dark-mode .loading-screen {
+  background: #0A0908;
+}
+
+/* --- Dark Mode: Back to top --- */
+body.dark-mode .back-to-top {
+  background: var(--gold);
+  color: #0F0E0C;
+}
+
+/* --- Dark Mode: Music toggle --- */
+body.dark-mode .music-toggle {
+  background: rgba(15, 14, 12, 0.85);
+}
+
+/* --- Dark Mode: WhatsApp btn --- */
+body.dark-mode .whatsapp-btn {
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* --- Dark Mode: Ornamental corners --- */
+body.dark-mode .ornamental-corners::before,
+body.dark-mode .ornamental-corners::after {
+  color: var(--gold);
+  opacity: 0.2;
+}
+
+/* --- Dark Mode: Scroll progress bar --- */
+body.dark-mode .scroll-progress {
+  background: var(--gold-gradient);
+}
+
+/* --- Dark Mode: Gallery overlay --- */
+body.dark-mode .gallery-overlay {
+  background: linear-gradient(to top, rgba(10, 9, 8, 0.7), transparent);
+}
+
+/* ========== TRANSITIONS ========== */
+
+/* Smooth transitions for theme switching */
+body,
+body section,
+body .navbar,
+body .navbar.scrolled,
+body .timeline-content,
+body .event-card,
+body .family-card,
+body .location-card,
+body .gift-card,
+body .wish-card,
+body .family-blessing,
+body .bank-details,
+body .wishes-form input,
+body .wishes-form textarea,
+body .section-title,
+body .section-subtitle,
+body .event-name,
+body .event-detail,
+body .timeline-title,
+body .timeline-text,
+body .family-name,
+body .family-role,
+body .location-name,
+body .location-address,
+body .gift-message,
+body .bank-detail-label,
+body .bank-detail-value,
+body .wish-name,
+body .wish-message,
+body .blessing-text,
+body .dress-code,
+body .family-avatar,
+body .back-to-top,
+body .music-toggle,
+body .theme-toggle-float {
+  transition: background-color 0.4s ease,
+              color 0.4s ease,
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+/* ========== COPYRIGHT FOOTER STYLES ========== */
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 12px;
+  letter-spacing: 0.05em;
+}
+
+.bcwu-brand {
+  color: var(--gold) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.bcwu-brand:hover {
+  color: var(--gold-light) !important;
+  text-shadow: 0 0 10px rgba(201, 168, 76, 0.4);
+}
+
+/* ========== RESPONSIVE: Mobile nav toggle ========== */
+@media (max-width: 768px) {
+  .theme-toggle-nav {
+    margin-left: 0;
+    margin-top: 16px;
+    align-self: flex-start;
+  }
+
+  .theme-toggle-float {
+    bottom: 230px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+}

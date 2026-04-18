@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="You are warmly invited to the wedding of Amaya & Kavinda — a beautiful celebration of love in the tradition of Sri Lankan culture. July 18, 2026 in Kandy, Sri Lanka.">
+  <meta name="keywords" content="wedding, invitation, Sri Lanka, Kandy, Poruwa, traditional wedding, Amaya, Kavinda">
+  <meta name="author" content="Amaya & Kavinda">
+  <meta name="creator" content="B Create With Us">
+  <meta name="designer" content="B Create With Us — Premium Web Design">
+  <meta name="copyright" content="© 2026 B Create With Us. All rights reserved.">
+  <meta name="generator" content="BCWU-v1.0">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Amaya & Kavinda — Wedding Invitation">
+  <meta property="og:description" content="Join us for a celebration of love — July 18, 2026, Kandy, Sri Lanka.">
+  <meta property="og:image" content="assets/images/hero-bg.png">
+
+  <title>Amaya & Kavinda — Wedding Invitation</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Amaya & Kavinda</div>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- ===== PETAL CANVAS ===== -->
+  <canvas id="petalCanvas"></canvas>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" class="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">A & K</a>
+
+      <div id="nav-links" class="nav-links">
+        <a href="#hero" data-i18n="navHome">Home</a>
+        <a href="#love-story" data-i18n="navStory">Our Story</a>
+        <a href="#wedding-details" data-i18n="navDetails">Events</a>
+        <a href="#poruwa" data-i18n="navPoruwa">Poruwa</a>
+        <a href="#family" data-i18n="navFamily">Family</a>
+        <a href="#locations" data-i18n="navLocation">Venues</a>
+        <a href="#gallery" data-i18n="navGallery">Gallery</a>
+        <a href="#rsvp" data-i18n="navRsvp">RSVP</a>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ta">தமிழ்</button>
+          <button class="lang-btn" data-lang="si">සිං</button>
+        </div>
+
+        <button id="theme-toggle-nav" class="theme-toggle-nav" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <span class="theme-icon-sun">☀️</span>
+          <span class="theme-icon-moon">🌙</span>
+        </button>
+      </div>
+
+      <div id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== SECTION 1: HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-ornament-top">✦ ✦ ✦</div>
+      <p class="hero-welcome" data-i18n="heroWelcome">We are getting married</p>
+      <h1 class="hero-names">
+        <span data-i18n="heroBrideName">Amaya</span>
+        <span class="ampersand" data-i18n="heroAmpersand">&</span>
+        <span data-i18n="heroGroomName">Kavinda</span>
+      </h1>
+      <p class="hero-date" data-i18n="heroDate">July 18, 2026 — Kandy, Sri Lanka</p>
+
+      <div class="countdown">
+        <div class="countdown-item">
+          <span id="countdown-days" class="countdown-value">00</span>
+          <span class="countdown-label" data-i18n="countdownDays">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span id="countdown-hours" class="countdown-value">00</span>
+          <span class="countdown-label" data-i18n="countdownHours">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span id="countdown-minutes" class="countdown-value">00</span>
+          <span class="countdown-label" data-i18n="countdownMinutes">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span id="countdown-seconds" class="countdown-value">00</span>
+          <span class="countdown-label" data-i18n="countdownSeconds">Seconds</span>
+        </div>
+      </div>
+
+      <button id="btn-save-date" class="btn-save-date" data-i18n="heroBtnSave">Save The Date</button>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span data-i18n="heroScroll">Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: LOVE STORY ===== -->
+  <section id="love-story" class="love-story ornamental-corners">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="storyTitle">Our Love Story</h2>
+      <div class="section-divider reveal">
+        <span class="line"></span>
+        <span class="ornament">🪷</span>
+        <span class="line"></span>
+      </div>
+      <p class="section-subtitle reveal" data-i18n="storySubtitle">A journey written in the stars</p>
+
+      <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-icon" data-i18n="storyIcon1">💕</div>
+            <div class="timeline-year" data-i18n="storyYear1">March 2022</div>
+            <h3 class="timeline-title" data-i18n="storyTitle1">How We Met</h3>
+            <p class="timeline-text" data-i18n="storyText1">Our paths crossed at a friend's wedding in Colombo. A chance encounter by the lotus pond turned into hours of conversation, laughter, and the beginning of something beautiful.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-icon" data-i18n="storyIcon2">✨</div>
+            <div class="timeline-year" data-i18n="storyYear2">November 2023</div>
+            <h3 class="timeline-title" data-i18n="storyTitle2">The Journey Together</h3>
+            <p class="timeline-text" data-i18n="storyText2">From sunset walks along Galle Face Green to exploring the ancient temples of Anuradhapura, every moment together deepened our bond and filled our hearts with joy.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-icon" data-i18n="storyIcon3">💍</div>
+            <div class="timeline-year" data-i18n="storyYear3">December 2025</div>
+            <h3 class="timeline-title" data-i18n="storyTitle3">The Proposal</h3>
+            <p class="timeline-text" data-i18n="storyText3">Under the stars at Sigiriya, surrounded by the magic of Sri Lanka's golden heritage, Kavinda asked the most beautiful question. With tears of joy, Amaya said yes!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: WEDDING DETAILS ===== -->
+  <section id="wedding-details" class="wedding-details">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="detailsTitle">Wedding Celebrations</h2>
+      <div class="section-divider reveal">
+        <span class="line"></span>
+        <span class="ornament">✦</span>
+        <span class="line"></span>
+      </div>
+      <p class="section-subtitle reveal" data-i18n="detailsSubtitle">Join us for these special moments</p>
+
+      <div class="events-grid reveal">
+        <!-- Event 1 -->
+        <div class="event-card">
+          <div class="event-icon">🏠</div>
+          <h3 class="event-name" data-i18n="event1Name">Home Ceremony</h3>
+          <div class="event-detail">
+            <span class="detail-icon">📅</span>
+            <span data-i18n="event1Date">July 17, 2026</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">🕐</span>
+            <span data-i18n="event1Time">9:00 AM</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">📍</span>
+            <span data-i18n="event1Venue">Family Residence, Kandy</span>
+          </div>
+          <div class="dress-code" data-i18n="event1Dress">Traditional Attire</div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card">
+          <div class="event-icon">🎭</div>
+          <h3 class="event-name" data-i18n="event2Name">Nalangu Ceremony</h3>
+          <div class="event-detail">
+            <span class="detail-icon">📅</span>
+            <span data-i18n="event2Date">July 17, 2026</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">🕐</span>
+            <span data-i18n="event2Time">4:00 PM</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">📍</span>
+            <span data-i18n="event2Venue">Family Residence, Kandy</span>
+          </div>
+          <div class="dress-code" data-i18n="event2Dress">Colorful Traditional Wear</div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card">
+          <div class="event-icon">🪷</div>
+          <h3 class="event-name" data-i18n="event3Name">Poruwa Ceremony</h3>
+          <div class="event-detail">
+            <span class="detail-icon">📅</span>
+            <span data-i18n="event3Date">July 18, 2026</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">🕐</span>
+            <span data-i18n="event3Time">10:30 AM</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">📍</span>
+            <span data-i18n="event3Venue">Queen's Hotel, Kandy</span>
+          </div>
+          <div class="dress-code" data-i18n="event3Dress">White / Ivory Formal</div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-card">
+          <div class="event-icon">📝</div>
+          <h3 class="event-name" data-i18n="event4Name">Registration</h3>
+          <div class="event-detail">
+            <span class="detail-icon">📅</span>
+            <span data-i18n="event4Date">July 18, 2026</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">🕐</span>
+            <span data-i18n="event4Time">12:00 PM</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">📍</span>
+            <span data-i18n="event4Venue">Queen's Hotel, Kandy</span>
+          </div>
+          <div class="dress-code" data-i18n="event4Dress">Formal Attire</div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="event-card">
+          <div class="event-icon">🎉</div>
+          <h3 class="event-name" data-i18n="event5Name">Grand Reception</h3>
+          <div class="event-detail">
+            <span class="detail-icon">📅</span>
+            <span data-i18n="event5Date">July 18, 2026</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">🕐</span>
+            <span data-i18n="event5Time">6:00 PM</span>
+          </div>
+          <div class="event-detail">
+            <span class="detail-icon">📍</span>
+            <span data-i18n="event5Venue">Earl's Regency Hotel</span>
+          </div>
+          <div class="dress-code" data-i18n="event5Dress">Evening Formal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: PORUWA CEREMONY ===== -->
+  <section id="poruwa" class="poruwa-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="poruwaTitle">The Sacred Poruwa</h2>
+      <div class="section-divider reveal">
+        <span class="line"></span>
+        <span class="ornament">🪷</span>
+        <span class="line"></span>
+      </div>
+      <p class="section-subtitle reveal" data-i18n="poruwaSubtitle">An ancient tradition of love</p>
+
+      <div class="poruwa-frame reveal">
+        <div class="poruwa-image-container">
+          <img src="assets/images/hero-bg.png" alt="Poruwa Ceremony Stage" loading="lazy">
+        </div>
+
+        <p class="poruwa-description" data-i18n="poruwaDesc">
+          The Poruwa ceremony is the sacred heart of a traditional Sinhalese wedding. On an elaborately decorated wooden platform, bride and groom exchange vows in a ritual that has blessed Sri Lankan unions for centuries — guided by auspicious timing, ancient chants, and the blessings of family.
+        </p>
+
+        <div class="rituals-grid reveal">
+          <div class="ritual-card">
+            <div class="ritual-number">01</div>
+            <h4 class="ritual-name" data-i18n="ritual1Name">Stepping onto the Poruwa</h4>
+            <p class="ritual-desc" data-i18n="ritual1Desc">The couple ascends the sacred platform together, right foot first</p>
+          </div>
+
+          <div class="ritual-card">
+            <div class="ritual-number">02</div>
+            <h4 class="ritual-name" data-i18n="ritual2Name">Betel Leaf Offering</h4>
+            <p class="ritual-desc" data-i18n="ritual2Desc">Offering betel leaves to each other symbolizing respect and love</p>
+          </div>
+
+          <div class="ritual-card">
+            <div class="ritual-number">03</div>
+            <h4 class="ritual-name" data-i18n="ritual3Name">Tying the Fingers</h4>
+            <p class="ritual-desc" data-i18n="ritual3Desc">Little fingers bound together with a sacred gold thread</p>
+          </div>
+
+          <div class="ritual-card">
+            <div class="ritual-number">04</div>
+            <h4 class="ritual-name" data-i18n="ritual4Name">Water Blessing</h4>
+            <p class="ritual-desc" data-i18n="ritual4Desc">Holy water poured over joined hands sealing the eternal bond</p>
+          </div>
+
+          <div class="ritual-card">
+            <div class="ritual-number">05</div>
+            <h4 class="ritual-name" data-i18n="ritual5Name">Jayamangala Gatha</h4>
+            <p class="ritual-desc" data-i18n="ritual5Desc">Traditional Buddhist blessings chanted for the couple's prosperity</p>
+          </div>
+
+          <div class="ritual-card">
+            <div class="ritual-number">06</div>
+            <h4 class="ritual-name" data-i18n="ritual6Name">Breaking the Coconut</h4>
+            <p class="ritual-desc" data-i18n="ritual6Desc">A coconut is broken to dispel misfortune and invoke blessings</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: FAMILIES ===== -->
+  <section id="family" class="families-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="familyTitle">Our Beloved Families</h2>
+      <div class="section-divider reveal">
+        <span class="line"></span>
+        <span class="ornament">🙏</span>
+        <span class="line"></span>
+      </div>
+      <p class="section-subtitle reveal" data-i18n="familySubtitle">With the blessings of our loved ones</p>
+
+      <div class="families-grid reveal">
+        <!-- Bride's Side -->
+        <div class="family-side">
+          <h3 class="family-label" data-i18n="brideSide">Bride's Family</h3>
+          <div class="family-members">
+            <div class="family-card">
+              <div class="family-avatar">👨</div>
+              <h4 class="family-name" data-i18n="brideFather">Mr. Sunil Perera</h4>
+              <p class="family-role" data-i18n="brideFatherRole">Father of the Bride</p>
+            </div>
+            <div class="family-card">
+              <div class="family-avatar">👩</div>
+              <h4 class="family-name" data-i18n="brideMother">Mrs. Nirmala Perera</h4>
+              <p class="family-role" data-i18n="brideMotherRole">Mother of the Bride</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Groom's Side -->
+        <div class="family-side">
+          <h3 class="family-label" data-i18n="groomSide">Groom's Family</h3>
+          <div class="family-members">
+            <div class="family-card">
+              <div class="family-avatar">👨</div>
+              <h4 class="family-name" data-i18n="groomFather">Mr. Rohan Fernando</h4>
+              <p class="family-role" data-i18n="groomFatherRole">Father of the Groom</p>
+            </div>
+            <div class="family-card">
+              <div class="family-avatar">👩</div>
+              <h4 class="family-name" data-i18n="groomMother">Mrs. Kamani Fernando</h4>
+              <p class="family-role" data-i18n="groomMotherRole">Mother of the Groom</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Family Blessing -->
+      <div class="family-blessing reveal">
+        <div class="blessing-icon">🙏</div>
+        <p class="blessing-text" data-i18n="blessingText">
+          "May the blessings of Lord Buddha, the Devas, and all our ancestors guide this beautiful union with eternal love, health, and prosperity."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: LOCATIONS ===== -->
+  <section id="locations" class="locations-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="locationTitle">Event Venues</h2>
+      <div class="section-divider reveal">
+        <span class="line"></span>
+        <span class="ornament">📍</span>
+        <span class="line"></span>
+      </div>
+      <p class="section-subtitle reveal" data-i18n="locationSubtitle">Where the celebrations unfold</p>
+
+      <div class="locations-grid reveal">
+        <!-- Ceremony Venue -->
+        <div class="location-card">
+          <div class="location-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5!2d80.6350!3d7.2906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMTcnMjYuMiJOIDgwwrAzOCcwNi4wIkU!5e0!3m2!1sen!2slk!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="location-info">
+            <span class="location-tag" data-i18n="ceremonyTag">Ceremony</span>
+            <h3 class="location-name" data-i18n="ceremonyName">Queen's Hotel, Kandy</h3>
+            <p class="location-address" data-i18n="ceremonyAddress">
+              Dalada Veediya, Kandy 20000, Sri Lanka. Overlooking the scenic Kandy Lake and the Temple of the Tooth.
+            </p>
+            <a href="https://maps.google.com/?q=Queens+Hotel+Kandy+Sri+Lanka" target="_blank" class="btn-directions" data-i18n="btnDirections">Get Directions ↗</a>
+          </div>
+        </div>
+
+        <!-- Reception Venue -->
+        <div class="location-card">
+          <div class="location-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5!2d80.6550!3d7.2800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMTYnNDguMCJOIDgwwrAzOScxOC4wIkU!5e0!3m2!1sen!2slk!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="location-info">
+            <span class="location-tag" data-i18n="receptionTag">Reception</span>
+            <h3 class="location-name" data-i18n="receptionName">Earl's Regency Hotel</h3>
+            <p class="location-address" data-i18n="receptionAddress">
+              Tennekumbura, Kundasale 20168, Sri Lanka. Nestled amidst lush greenery in the hills of Kandy.
+            </p>
+            <a href="https://maps.google.com/?q=Earls+Regency+Hotel+Kandy+Sri+Lanka" target="_blank" class="btn-directions" data-i18n="btnDirections">Get Directions ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: GALLERY ===== -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="galleryTitle">Our Gallery</h2>
+      <div class="section-divider reveal">
+        <span class="line"></span>
+        <span class="ornament">📸</span>
+        <span class="line"></span>
+      </div>
+      <p class="section-subtitle reveal" data-i18n="gallerySubtitle">Precious memories captured forever</p>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img src="assets/images/couple.png" alt="Our Journey Together" loading="lazy">
+          <div class="gallery-overlay"><span data-i18n="galleryCaption1">Our Journey Together</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery-2.png" alt="Pre-Wedding Shoot" loading="lazy">
+          <div class="gallery-overlay"><span data-i18n="galleryCaption2">Pre-Wedding Shoot</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery-3.png" alt="Beautiful Moments" loading="lazy">
+          <div class="gallery-overlay"><span data-i18n="galleryCaption3">Beautiful Moments</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/gallery-1.png" alt="Traditional Details" loading="lazy">
+          <div class="gallery-overlay"><span data-i18n="galleryCaption4">Traditional Details</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/hero-bg.png" alt="Forever & Always" loading="lazy">
+          <div class="gallery-overlay"><span data-i18n="galleryCaption5">Forever & Always</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button id="lightbox-close" class="lightbox-close">✕</button>
+    <button id="lightbox-prev" class="lightbox-nav lightbox-prev">❮</button>
+    <img id="lightbox-image" class="lightbox-image" src="" alt="Gallery Image">
+    <button id="lightbox-next" class="lightbox-nav lightbox-next">❯</button>
+  </div>
+
+  <!-- ===== SECTION 8: RSVP ===== -->
+  <section id="rsvp" class="rsvp-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="rsvpTitle">RSVP</h2>
+      <div class="section-divider reveal">
+        <span class="line"></span>
+        <span class="ornament">💌</span>
+        <span class="line"></span>
+      </div>
+      <p class="section-subtitle reveal" data-i18n="rsvpSubtitle">We'd love to celebrate with you</p>
+
+      <form id="rsvp-form" class="rsvp-form reveal">
+        <div class="form-group">
+          <label data-i18n="rsvpName">Your Full Name</label>
+          <input type="text" name="name" required data-i18n="rsvpNamePh" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="rsvpGuests">Number of Guests</label>
+          <select name="guests" required>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="rsvpAttend">Will You Attend?</label>
+          <div class="attend-options">
+            <div class="attend-option">
+              <input type="radio" name="attendance" id="attend-yes" value="yes" required>
+              <label for="attend-yes" data-i18n="rsvpYes">Joyfully Accept ✓</label>
+            </div>
+            <div class="attend-option">
+              <input type="radio" name="attendance" id="attend-no" value="no">
+              <label for="attend-no" data-i18n="rsvpNo">Regretfully Decline ✗</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="rsvpDiet">Dietary Requirements (Optional)</label>
+          <input type="text" name="dietary" data-i18n="rsvpDietPh" placeholder="Any dietary restrictions...">
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="rsvpMessage">Message for the Couple</label>
+          <textarea name="message" rows="4" data-i18n="rsvpMessagePh" placeholder="Write your message & blessings..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" data-i18n="rsvpSubmit">Send RSVP</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 9: GUEST WISHES ===== -->
+  <section id="wishes" class="wishes-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="wishesTitle">Guest Wishes</h2>
+      <div class="section-divider reveal">
+        <span class="line"></span>
+        <span class="ornament">✨</span>
+        <span class="line"></span>
+      </div>
+      <p class="section-subtitle reveal" data-i18n="wishesSubtitle">Leave your blessings for the couple</p>
+
+      <form id="wishes-form" class="wishes-form reveal">
+        <input type="text" name="wishName" required data-i18n="wishNamePh" placeholder="Your Name">
+        <textarea name="wishMessage" rows="3" required data-i18n="wishMessagePh" placeholder="Write your blessing or wish..."></textarea>
+        <button type="submit" class="btn-wish" data-i18n="wishSubmit">Send Blessings ✦</button>
+      </form>
+
+      <div id="wishes-grid" class="wishes-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 10: GIFT REGISTRY ===== -->
+  <section id="gifts" class="gift-section">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="giftTitle">Gifts & Blessings</h2>
+      <div class="section-divider reveal">
+        <span class="line"></span>
+        <span class="ornament">🎁</span>
+        <span class="line"></span>
+      </div>
+      <p class="section-subtitle reveal" data-i18n="giftSubtitle">Your presence is our greatest gift</p>
+
+      <div class="gift-card reveal">
+        <div class="gift-icon">🎁</div>
+        <p class="gift-message" data-i18n="giftMessage">
+          Your presence at our wedding is the most cherished gift we could receive. However, if you wish to honor us with a gift, we would be grateful for a contribution towards our new journey together.
+        </p>
+
+        <div class="bank-details">
+          <div class="bank-detail-row">
+            <span class="bank-detail-label" data-i18n="bankName">Account Name</span>
+            <span class="bank-detail-value" data-i18n="bankNameVal">Amaya & Kavinda Wedding Fund</span>
+          </div>
+          <div class="bank-detail-row">
+            <span class="bank-detail-label" data-i18n="bankBank">Bank</span>
+            <span class="bank-detail-value" data-i18n="bankBankVal">Bank of Ceylon</span>
+          </div>
+          <div class="bank-detail-row">
+            <span class="bank-detail-label" data-i18n="bankAccount">Account No.</span>
+            <span class="bank-detail-value" data-i18n="bankAccountVal">XXXX-XXXX-XXXX-1234</span>
+          </div>
+          <div class="bank-detail-row">
+            <span class="bank-detail-label" data-i18n="bankBranch">Branch</span>
+            <span class="bank-detail-value" data-i18n="bankBranchVal">Kandy Main Branch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 12: FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-ornament">✦ ✦ ✦</div>
+      <h3 class="footer-thankyou" data-i18n="footerThankYou">Thank You</h3>
+      <p class="footer-message" data-i18n="footerMessage">
+        We are truly blessed to have you in our lives. Thank you for being part of our love story.
+      </p>
+
+      <div class="footer-contact">
+        <a href="tel:+94771234567">📞 +94 77 123 4567</a>
+        <a href="mailto:amaya.kavinda@email.com">📧 amaya.kavinda@email.com</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-divider"></div>
+      <p class="footer-credit">
+        <span data-i18n="footerCredit">Designed with</span> <span class="heart">❤️</span> <span data-i18n="footerCreditEnd">for Amaya & Kavinda</span>
+      </p>
+      <p class="footer-copyright">
+        © 2026 <a href="#" class="bcwu-brand">B Create With Us</a>. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING ELEMENTS ===== -->  
+
+  <!-- Back to Top Button -->
+  <div id="back-to-top" class="back-to-top" title="Back to Top">↑</div>
+
+  <!-- Music Toggle Button -->
+  <div id="music-toggle" class="music-toggle" title="Toggle Music">🔇</div>
+
+  <!--Background Music (add your MP3 file)-->
+  <audio id="bg-music" loop preload="none">
+    <source src="assets/music/wedding-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/protection.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
